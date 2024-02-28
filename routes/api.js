@@ -39,11 +39,12 @@ router.post("/projects", async (req, res) => {
       "${newProj.title}", 
       "${newProj.designer}", 
       "${newProj.yarn}", 
-      ${newProj.needles}, 
-      ${newProj.start}, 
-      ${newProj.end}, 
+      "${newProj.needles}", 
+      "${newProj.start}", 
+      "${newProj.end}", 
       ${newProj.completed}
     );`)
+    //TODO: add image 
     selectAllItems(req, res)
   } catch(err) {
     res.status(500).send(err)
@@ -54,8 +55,35 @@ router.post("/projects", async (req, res) => {
 /*     -----     PUT     -----     */
 
 
-
+router.put("/projects/:projects_id", async (req, res) => {
+  try {
+    await db(`UPDATE projects SET 
+    title = "${newproj.title}", 
+    designer = "${newproj.designer}", 
+    yarn = "${newproj.yarn}", 
+    needles = "${newproj.needles}", 
+    start = "${newproj.start}", 
+    end = "${newproj.end}", 
+    completed = ${newproj.completed} 
+    WHERE id = ${req.params.projects_id};`);
+    selectAllItems(req, res);
+  } catch(err) {
+    res.status(500).send(err)
+  }
+});
 
 
 /*     -----     DELETE     -----     */
+
+
+router.delete("/projects/:projects_id", async (req, res) => {
+  try {
+    await db(`DELETE FROM projects WHERE id = ${req.params.projects_id};`);
+    selectAllItems(req, res);
+  } catch(err) {
+    req.status(500).send(err)
+  }
+});
+
+
 module.exports = router;
