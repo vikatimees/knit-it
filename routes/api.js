@@ -35,14 +35,15 @@ router.get("/projects", (req, res) => {
 router.post("/projects", async (req, res) => {
   let newProj = req.body;
   try {
-    await db(`INSERT INTO projects (title, designer, yarn, needles, start, end, complete) VALUES (
+    await db(`INSERT INTO projects (title, designer, yarn, needles, start, end, completed, img) VALUES (
       "${newProj.title}", 
       "${newProj.designer}", 
       "${newProj.yarn}", 
       "${newProj.needles}", 
       "${newProj.start}", 
       "${newProj.end}", 
-      ${newProj.completed}
+      ${newProj.completed},
+      "${newproj.img}"
     );`)
     //TODO: add image 
     selectAllItems(req, res)
@@ -64,7 +65,8 @@ router.put("/projects/:projects_id", async (req, res) => {
     needles = "${newproj.needles}", 
     start = "${newproj.start}", 
     end = "${newproj.end}", 
-    completed = ${newproj.completed} 
+    completed = ${newproj.completed}, 
+    img = "${newproj.img}"
     WHERE id = ${req.params.projects_id};`);
     selectAllItems(req, res);
   } catch(err) {
