@@ -43,7 +43,7 @@ router.post("/projects", async (req, res) => {
       "${newProj.start}", 
       "${newProj.end}", 
       ${newProj.completed},
-      "${newproj.img}"
+      "${newProj.img}"
     );`)
     //TODO: add image 
     selectAllItems(req, res)

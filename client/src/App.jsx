@@ -20,11 +20,6 @@ function App() {
       });
   }, []);
 
-  const addProject = (project) => {
-    setProjects([...projects, project]);
-    console.log(projects);
-  }
-
   const showForm = () => [
     setIsForm(!isForm)
   ]
@@ -40,7 +35,7 @@ function App() {
       </header>
       
       <div className="view">
-        {isForm ? <Form createProject={addProject} /> : <ProjectList projects={projects} />}
+        {isForm ? <Form createProject /> : <ProjectList projects={projects} />}
       </div>
     </>
   )
