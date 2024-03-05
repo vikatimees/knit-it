@@ -29,11 +29,20 @@ function App() {
   return (
     <>
       <header>
-        <button onClick={showForm}>
-          {isForm ? 'projects' : 'add new'}  
-        </button> 
-        <h1>knit it!</h1>
-        <img src={profile} alt={"profile image"} />
+        
+        <div className="top">
+          <button onClick={showForm}>
+            {isForm ? 'projects' : 'add new'}  
+          </button>
+          <img src={profile} alt={"profile image"} />
+        </div>
+        
+        <div className="title">
+          <h1>knit it!</h1>
+        </div>
+        
+        
+      
       </header>
       
       <div className="view">

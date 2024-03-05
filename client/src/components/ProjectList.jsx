@@ -20,17 +20,19 @@ const ProjectList = ({ projects }) => {
     <div>
       <div className="project-list">
         {projects.map((project) => (
-          <div className="project-card" key={project.id}>
+          <div className="card" key={project.id}>
             <img src={project.img} alt={project.title} />
             <br />
+            <div className="info">
             <h2>{project.title}</h2>
-            <ul>
-              <li><h3>by: {project.designer}</h3></li>
-              <li>yarn: {project.yarn}</li>
-              <li>needle sizes: {project.needles}</li>
-              <li>start date: {project.start}</li>
-              <li>end date: {project.end}</li>
-            </ul>
+              <ul>
+                <li><h3>by: {project.designer}</h3></li>
+                <li>yarn: {project.yarn}</li>
+                <li>needle sizes: {project.needles}</li>
+                <li>start date: {project.start}</li>
+                {project.end ? <li>end date: {project.end}</li> : <li>in progress</li>}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
