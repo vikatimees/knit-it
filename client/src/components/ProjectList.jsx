@@ -25,13 +25,11 @@ const ProjectList = ({ projects }) => {
             <br />
             <div className="info">
             <h2>{project.title}</h2>
-              <ul>
-                <li><h3>by: {project.designer}</h3></li>
-                <li>yarn: {project.yarn}</li>
-                <li>needle sizes: {project.needles}</li>
-                <li>start date: {project.start}</li>
-                {project.end ? <li>end date: {project.end}</li> : <li>in progress</li>}
-              </ul>
+                <h3>by: {project.designer}</h3>
+                <p>yarn: {project.yarn}</p>
+                <p>needle sizes: {project.needles}</p>
+                <p>start date: {project.start}</p>
+                {project.end ? <p>end date: {project.end}</p> : <p>in progress</p>}
             </div>
           </div>
         ))}

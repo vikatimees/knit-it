@@ -94,9 +94,6 @@ const Form = () => {
         <label>end</label>
         <input type="date" value={end} onChange={(e) => setEnd(e.target.value)} />
 
-        <label>completed</label>
-        <input type="checkbox" checked={completed} onChange={(e) => setCompleted(e.target.value)} />
-
         <label>add image</label>
         <input type="url" value={img} onChange={(e) => setImg(e.target.value)} />
         <button type="submit">SUBMIT</button>

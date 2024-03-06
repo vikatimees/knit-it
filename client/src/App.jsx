@@ -31,7 +31,7 @@ function App() {
       <header>
         
         <div className="top">
-          <button onClick={showForm}>
+          <button id="view-btn" onClick={showForm}>
             {isForm ? 'projects' : 'add new'}  
           </button>
           <img src={profile} alt={"profile image"} />

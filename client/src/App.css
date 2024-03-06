@@ -5,10 +5,6 @@
   text-align: center;
 }
 
-header {
-
-}
-
 .top {
   display: flex;
   justify-content: space-between;
@@ -19,9 +15,7 @@ header {
   margin: 0;
 }
 
-
-
-header button {
+#view-btn {
   font-family: "Neucha", cursive;
   height: 100%;
   padding: 10px 30px;
@@ -29,6 +23,7 @@ header button {
   border-radius: 50px;
   font-size: 1.5rem;
   background-color: #b185a7;
+  width: auto;
 }
 
 h1 {
@@ -38,19 +33,26 @@ h1 {
   color: #5f1a37;
 }
 
+h2 {
+  font-size: 2.5rem;
+  color: #5f1a37;
+
+}
+
 header img {
   width: 70px;
   height: 70px;
 }
 
-.project-list {
-  display: flexbox;
-}
 
 .card {
   background-color: #c3a29e;
   display: inline-block;
-  vertical-align: middle;
+  text-align: center;
+  padding: 40px;
+  margin: 50px;
+  border-radius: 20px;
+  width: 40%;
 }
 
 img {
@@ -58,4 +60,46 @@ img {
   width: 250px;
   height: 250px;
   border-radius: 100%;
+}
+
+input, textarea {
+  background-color: white;
+  margin: 10px;
+  color: #b185a7;
+  display: block;
+  padding: 10px 6px;
+  width: 96%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #b185a7;
+  font-family: 'Questrial', sans-serif;
+}
+form {
+  max-width: 420px;
+  margin: 30px auto;
+  background: white;
+  text-align: left;
+  padding: 40px;
+  border-radius: 20px;
+}
+label {
+  color: #b185a7;
+  margin: 25px 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b185a7;
+  text-transform: lowercase;
+  font-family: "Neucha", cursive;
+  font-size: 1.5rem;
+  width: 96%;
+  cursor: pointer;
 }
