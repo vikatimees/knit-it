@@ -32,13 +32,13 @@ npm run dev
 
 This page stores the projects that have been inputted. The project card will display an image and title together with information. If an end date has not been added to the project, "in progress" will be visible instead of the date.
 
-![project page](projects.png)
+![project page](./photos/projects.png)
 
 ### New project form
 
 This page displays a simple form for inputting necessary data. End date input is optional.
 
-![project form](form.png)
+![project form](./photos/form.png)
 
 ## Back end
 
@@ -46,7 +46,7 @@ This page displays a simple form for inputting necessary data. End date input is
 
 The database for *knit it!* has been made using MySQL. The apps used for working on the backend are [Beekeeper Studio](https://www.beekeeperstudio.io/) and [Insomnia](https://insomnia.rest/)
 
-![database](database.png)
+![database](./photos/database.png)
 
 ## To be added:
 
