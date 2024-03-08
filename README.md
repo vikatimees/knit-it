@@ -55,4 +55,5 @@ The database for *knit it!* has been made using MySQL. The apps used for working
 - create log in feature
 - inspiration page using an external api
 - add row counters for each project documented
-- 
+
+  *this project was made by the guidance of the CodeOp bootcamp.*
