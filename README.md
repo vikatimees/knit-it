@@ -6,25 +6,52 @@
 
 ## Installation
 
-To run this app, open up two separate terminals in the project folder.
+### Start expresss server
 
-In one of them, run the following commands:
+1. In the terminal run:
 
 ```
-npm install
-
 npm start
 ```
 
-In the next terminal, run the following:
+Don't kill it; let it run.
+
+### Start frontend dev server
+
+2. In a fresh, second terminal run:
 
 ```
 cd client
-
-npm install
-
 npm run dev
 ```
+
+Don't kill it; let it run.
+
+### Run mysql
+
+3. In a third terminal run:
+
+```
+mysql -u root -p
+<enter your mysql password>
+USE knitit;
+```
+
+Or if you already have set up mysql so you skip entering password:
+
+```
+mysql
+USE knitit;
+```
+
+Now you are free to run your queries, such as:
+
+```
+SHOW tables;
+SELECT * FROM <tablename>;
+DESC <tablename>;
+```
+
 
 ## Front end
 
