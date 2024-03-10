@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const ProjectList = ({ projects }) => {
 
-  // useEffect(() => {
-  //   const fetchProj = async () => {
-  //     try {
-  //       const res = await fetch('/api/projects');
-  //       const data = await res.json();
-  //       setProjects(data);
-  //     } catch (error) {
-  //       console.error('ProjectList fetch error:', error)
-  //     }
-  //   };
-
-  //   fetchProj();
-  // }, []) // i am not sure if i need this, keep commented just in case
-
   return (
     <div>
       <div className="project-list">

@@ -8,7 +8,6 @@ const Form = () => {
   const [needles, setNeedles] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
-  const [completed, setCompleted] = useState(false);
   const [img, setImg] = useState("");
   const [projects, setProjects] = useState([]);
 
@@ -16,28 +15,6 @@ const Form = () => {
     e.preventDefault();
     addProject()
     console.log(projects);
-  }
-
-  const handleChange = e => {
-    setTitle(e.target.value);
-    setDesigner(e.target.value);
-    setYarn(e.target.value);
-    setNeedles(e.target.value);
-    setStart(e.target.value);
-    setEnd(e.target.value);
-    setCompleted(e.target.value);
-    setImg(e.target.value)
-  }
-
-  const resetForm = () => {
-    setTitle('');
-    setDesigner('');
-    setYarn('');
-    setNeedles('');
-    setStart('');
-    setEnd('');
-    setCompleted(false);
-    setImg('')
   }
 
   const addProject = () => {
@@ -53,7 +30,6 @@ const Form = () => {
         needles: needles,
         start: start,
         end: end,
-        completed: 0,
         img: img
       })
     };
@@ -67,7 +43,6 @@ const Form = () => {
       setNeedles('');
       setStart('');
       setEnd('');
-      setCompleted(false);
       setImg('')
     })
  
@@ -91,7 +66,7 @@ const Form = () => {
         <label>start</label>
         <input type="date" required value={start} onChange={(e) => setStart(e.target.value)} />
 
-        <label>end</label>
+        <label>end (optional)</label>
         <input type="date" value={end} onChange={(e) => setEnd(e.target.value)} />
 
         <label>add image</label>

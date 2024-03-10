@@ -40,9 +40,7 @@ function App() {
         <div className="title">
           <h1>knit it!</h1>
         </div>
-        
-        
-      
+
       </header>
       
       <div className="view">
